@@ -13,5 +13,7 @@ An ASP.Net MVC component to interact with [jQuery datatables](https://datatables
 
 ## Credits
 [jQuery datatables](https://datatables.net/)
+
 [Autofac](https://autofac.org/)
+
 [mvc.jquery.datatables](https://github.com/mcintyre321/mvc.jquery.datatables)
