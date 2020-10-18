@@ -30,6 +30,9 @@ namespace MVCDatatables.Web.App_Start
             var container = builder.Build();
             IoCBootstrapper.SetIoCContainer(container);
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
+            app.UseAutofacMiddleware(container);
+            app.UseAutofacMvc();
         }
     }
 }
