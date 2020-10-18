@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCDatatables.Presentation.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCDatatables.Data", "MVCDatatables.Data\MVCDatatables.Data.csproj", "{1E832BDB-A3F3-492A-A7E5-4E7AE53B6222}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCDatatables.Services", "MVCDatatables.Services\MVCDatatables.Services.csproj", "{62A882FA-2F61-48D0-B01A-4721B53B0F2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1E832BDB-A3F3-492A-A7E5-4E7AE53B6222}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E832BDB-A3F3-492A-A7E5-4E7AE53B6222}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E832BDB-A3F3-492A-A7E5-4E7AE53B6222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62A882FA-2F61-48D0-B01A-4721B53B0F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A882FA-2F61-48D0-B01A-4721B53B0F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A882FA-2F61-48D0-B01A-4721B53B0F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A882FA-2F61-48D0-B01A-4721B53B0F2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

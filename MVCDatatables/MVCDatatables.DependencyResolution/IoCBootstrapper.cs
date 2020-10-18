@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using MVCDatatables.DependencyResolution.Modules;
 
 namespace MVCDatatables.DependencyResolution
 {
@@ -35,7 +36,7 @@ namespace MVCDatatables.DependencyResolution
             var builder = new ContainerBuilder();
 
             // Do any registrations.
-            
+            builder.RegisterModule<ServicesModule>();
 
             // Return the builder.
             return builder;

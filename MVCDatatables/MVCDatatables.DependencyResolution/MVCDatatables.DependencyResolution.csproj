@@ -67,14 +67,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IoCBootstrapper.cs" />
+    <Compile Include="Modules\ServicesModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Modules\" />
+    <ProjectReference Include="..\MVCDatatables.Services\MVCDatatables.Services.csproj">
+      <Project>{62a882fa-2f61-48d0-b01a-4721b53b0f2f}</Project>
+      <Name>MVCDatatables.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
