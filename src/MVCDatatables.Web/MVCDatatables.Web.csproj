@@ -339,6 +339,7 @@
     <Content Include="Scripts\Plugins\DataTables\datatables.js" />
     <Content Include="Scripts\Plugins\DataTables\datatables.min.css" />
     <Content Include="Scripts\Plugins\DataTables\datatables.min.js" />
+    <Content Include="Scripts\Plugins\Moment\moment.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -469,6 +470,9 @@
     <TypeScriptCompile Include="Scripts\TypeScript\Component\datatable-service.ts" />
     <TypeScriptCompile Include="Scripts\TypeScript\Component\site-alert.ts" />
     <TypeScriptCompile Include="Scripts\TypeScript\Component\site-loader.ts" />
+    <TypeScriptCompile Include="Scripts\TypeScript\CustomTypings\bootstrap.d.ts" />
+    <TypeScriptCompile Include="Scripts\TypeScript\CustomTypings\jquery-extensions.d.ts" />
+    <TypeScriptCompile Include="Scripts\TypeScript\CustomTypings\moment.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

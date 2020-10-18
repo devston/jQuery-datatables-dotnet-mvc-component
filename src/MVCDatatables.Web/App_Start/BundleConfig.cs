@@ -32,6 +32,9 @@ namespace MVCDatatables.Web
                 "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/buttons.print.min.js"
                 ));
 
+            bundles.Add(new ScriptBundle("~/bundles/moment").Include(
+                        "~/Scripts/Plugins/moment.js"));
+
             // Components.
             bundles.Add(new ScriptBundle("~/bundles/site-loader").Include("~/Scripts/Compiled/Component/site-loader.js"));
             bundles.Add(new ScriptBundle("~/bundles/site-alert").Include("~/Scripts/Compiled/Component/site-alert.js"));
