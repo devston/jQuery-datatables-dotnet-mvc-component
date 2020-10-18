@@ -213,9 +213,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -345,8 +342,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -394,9 +389,17 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MVCDatatables.Data\MVCDatatables.Data.csproj">
+      <Project>{1e832bdb-a3f3-492a-a7e5-4e7ae53b6222}</Project>
+      <Name>MVCDatatables.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MVCDatatables.DependencyResolution\MVCDatatables.DependencyResolution.csproj">
       <Project>{2fe489a9-168a-421d-b5f7-d39c7f35466f}</Project>
       <Name>MVCDatatables.DependencyResolution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVCDatatables.Presentation.Models\MVCDatatables.Presentation.Models.csproj">
+      <Project>{9d98b25a-6ddb-42e7-a24c-cb9998af22bd}</Project>
+      <Name>MVCDatatables.Presentation.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
