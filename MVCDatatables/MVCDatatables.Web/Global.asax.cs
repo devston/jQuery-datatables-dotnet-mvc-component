@@ -1,0 +1,36 @@
+using MVCDatatables.DependencyResolution;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Optimization;
+using System.Web.Routing;
+
+namespace MVCDatatables.Web
+{
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        /// <summary>
+        /// The main application start method.
+        /// </summary>
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        /// <summary>
+        /// The application shut down method.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The event arguments.</param>
+        protected void Application_End(object sender, EventArgs e)
+        {
+            // Dispose of the IoC container.
+            IoCBootstrapper.DisposeContainer();
+        }
+    }
+}
