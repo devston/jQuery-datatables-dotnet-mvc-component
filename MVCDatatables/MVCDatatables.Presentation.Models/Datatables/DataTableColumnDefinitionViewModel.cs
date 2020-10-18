@@ -29,7 +29,6 @@ namespace MVCDatatables.Presentation.Models.Datatables
             IsFirstSortColumn = false;
             IsSecondSortColum = false;
             IsThirdSortColumn = false;
-            IsColourColumn = false;
             IsFormattedDecimal = false;
         }
 
@@ -143,12 +142,6 @@ namespace MVCDatatables.Presentation.Models.Datatables
         /// Gets or sets a value indicating whether this column is inside a child row.
         /// </summary>
         public bool IsInChildRow { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether this instance is colour column.
-        /// </summary>
-        /// <value><c>true</c> if this instance is colour column; otherwise, <c>false</c>.</value>
-        public bool IsColourColumn { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether this column is to be a formatted decimal.
@@ -297,16 +290,6 @@ namespace MVCDatatables.Presentation.Models.Datatables
         {
             visible = false;
             IsInChildRow = true;
-            return this;
-        }
-
-        /// <summary>
-        /// Determines whether [is colour value].
-        /// </summary>
-        /// <returns>DataTableColumnDefinitionViewModel.</returns>
-        public DataTableColumnDefinitionViewModel IsColourValue()
-        {
-            IsColourColumn = true;
             return this;
         }
 

@@ -20,11 +20,32 @@ namespace MVCDatatables.Web
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/popper.js",
                       "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/datatables").Include(
+                "~/Scripts/Plugins/DataTables/datatables.js",
+                "~/Scripts/Plugins/DataTables/DataTables-1.10.22/js/dataTables.bootstrap4.js",
+                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/dataTables.buttons.js",
+                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/buttons.bootstrap4.js",
+                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/buttons.html5.min.js",
+                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/buttons.print.min.js"
+                ));
+
+            // Components.
+            bundles.Add(new ScriptBundle("~/bundles/site-loader").Include("~/Scripts/Compiled/Component/site-loader.js"));
+            bundles.Add(new ScriptBundle("~/bundles/site-alert").Include("~/Scripts/Compiled/Component/site-alert.js"));
+            bundles.Add(new ScriptBundle("~/bundles/datatable-service").Include("~/Scripts/Compiled/Component/datatable-service.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Scripts/Plugins/DataTables/datatables.css",
+                "~/Scripts/Plugins/DataTables/datatables-bs4.css",
+                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/css/buttons.bootstrap4.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/datatables").Include("~/Scripts/Plugins/DataTables/datatables.css"));
+            bundles.Add(new StyleBundle("~/Content/datatables-bs4").Include("~/Scripts/Plugins/DataTables/datatables-bs4.css"));
+            bundles.Add(new StyleBundle("~/Content/datatables-bs4-buttons").Include("~/Scripts/Plugins/DataTables/Buttons-1.6.5/css/buttons.bootstrap4.css"));
         }
     }
 }

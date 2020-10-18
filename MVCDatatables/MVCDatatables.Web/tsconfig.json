@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "module": "none",
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "rootDir": "Scripts/TypeScript",
+    "sourceMap": true,
+    "target": "es5",
+    "lib": [ "dom", "es5", "scripthost", "es7" ],
+    "outDir": "Scripts/Compiled"
+  },
+  "include": [
+    "node_modules/@types/*/index.d.ts",
+    "Scripts/TypeScript/**/*", 
+    "Scripts/jquery-3.5.1.js"
+  ],
+  "exclude": [
+    //"node_modules",
+    "wwwroot"
+  ]
+}

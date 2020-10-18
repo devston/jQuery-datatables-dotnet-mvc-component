@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "mvc_datatables",
+  "private": true,
+  "devDependencies": {
+    "@types/datatables.net": "1.10.13",
+    "@types/datatables.net-buttons": "1.4.2",
+    "@types/jquery": "3.3.25",
+    "@types/jquery.validation": "^1.16.4",
+    "@types/jquery-validation-unobtrusive": "3.2.32"
+  }
+}
