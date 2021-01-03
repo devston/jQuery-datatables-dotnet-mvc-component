@@ -12,11 +12,15 @@
 var DatatablesDemo;
 (function (DatatablesDemo) {
     var basicTableSelector = "#basic-demo-table-container";
+    var childRowTableSelector = "#child-row-demo-table-container";
+    var exportTableSelector = "#export-demo-table-container";
     /**
      * Initialise the module.
      */
     function init() {
         initBasicDemoTable();
+        initChildRowDemoTable();
+        initExportDemoTable();
     }
     DatatablesDemo.init = init;
     /**
@@ -24,7 +28,21 @@ var DatatablesDemo;
      */
     function initBasicDemoTable() {
         var table = new TableService.DataTable(basicTableSelector);
-        table.renderWithBackendUrl("/Home/DemoListTable/");
+        table.showProcessingLoader().renderWithBackendUrl("/Home/DemoListTable/");
+    }
+    /**
+     * Initialise the child row demo table.
+     */
+    function initChildRowDemoTable() {
+        var table = new TableService.DataTable(childRowTableSelector);
+        table.showProcessingLoader().withChildRows().renderWithBackendUrl("/Home/ChildDemoListTable/");
+    }
+    /**
+     * Initialise the export demo table.
+     */
+    function initExportDemoTable() {
+        var table = new TableService.DataTable(exportTableSelector);
+        table.showProcessingLoader().WithExcelExport({ title: "Test", messageBottom: "Test" }).WithPdfExport({ title: "Test", messageBottom: "Test" }).renderWithBackendUrl("/Home/DemoListTable/");
     }
 })(DatatablesDemo || (DatatablesDemo = {}));
 // Initialise the datatables demo module on page load.

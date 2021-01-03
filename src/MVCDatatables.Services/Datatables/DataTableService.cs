@@ -176,6 +176,12 @@ namespace MVCDatatables.Services.Datatables
 
             foreach (var item in sortUsingProperty)
             {
+                // Skip the inserted child row property from JavaScript.
+                if (item.Key == "ChildRowAccordion")
+                {
+                    continue;
+                }
+
                 if (item.Value == SortDirection.Ascending)
                 {
                     sortedQuery = sortedQuery.GenericOrderBy(item.Key).Skip(param.iDisplayStart).Take(param.iDisplayLength);

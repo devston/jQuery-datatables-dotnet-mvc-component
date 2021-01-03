@@ -14,12 +14,16 @@
 namespace DatatablesDemo {
 
     const basicTableSelector = "#basic-demo-table-container";
+    const childRowTableSelector = "#child-row-demo-table-container";
+    const exportTableSelector = "#export-demo-table-container";
 
     /**
      * Initialise the module.
      */
     export function init() {
         initBasicDemoTable();
+        initChildRowDemoTable();
+        initExportDemoTable();
     }
 
     /**
@@ -27,7 +31,23 @@ namespace DatatablesDemo {
      */
     function initBasicDemoTable() {
         const table = new TableService.DataTable(basicTableSelector);
-        table.renderWithBackendUrl("/Home/DemoListTable/");
+        table.showProcessingLoader().renderWithBackendUrl("/Home/DemoListTable/");
+    }
+
+    /**
+     * Initialise the child row demo table.
+     */
+    function initChildRowDemoTable() {
+        const table = new TableService.DataTable(childRowTableSelector);
+        table.showProcessingLoader().withChildRows().renderWithBackendUrl("/Home/ChildDemoListTable/");
+    }
+
+    /**
+     * Initialise the export demo table.
+     */
+    function initExportDemoTable() {
+        const table = new TableService.DataTable(exportTableSelector);
+        table.showProcessingLoader().WithExcelExport({ title: "Test", messageBottom: "Test" }).WithPdfExport({ title: "Test", messageBottom: "Test" }).renderWithBackendUrl("/Home/DemoListTable/");
     }
 }
 

@@ -184,13 +184,7 @@ namespace TableService {
                     "infoFiltered": "(filtered from _MAX_)",
                     "lengthMenu": "Show _MENU_",
                     "search": `<i aria-hidden="true" class="fal fa-search"></i>`,
-                    "searchPlaceholder": "Search",
-                    "paginate": {
-                        "first": "<i aria-hidden=\"true\" class=\"fas fa-angle-double-left\"></i>",
-                        "previous": "<i aria-hidden=\"true\" class=\"fas fa-angle-left\"></i>",
-                        "next": "<i aria-hidden=\"true\" class=\"fas fa-angle-right\"></i>",
-                        "last": "<i aria-hidden=\"true\" class=\"fas fa-angle-double-right\"></i>"
-                    }
+                    "searchPlaceholder": "Search"
                 },
                 "columnDefs": [
                     {
@@ -219,7 +213,7 @@ namespace TableService {
                         {
                             "extend": "collection",
                             "className": "btn btn-transparent",
-                            "text": "<i aria-hidden=\"true\" class=\"fal fa-ellipsis-v\"></i>",
+                            "text": "Open",
                             "titleAttr": "Export data",
                             "buttons": this._exportButtons
                         }
@@ -395,7 +389,7 @@ namespace TableService {
                 columnsData.unshift({
                     "className": "table-child-accordion",
                     "data": "ChildRowAccordion",
-                    "defaultContent": '<button class="btn btn-transparent table-child-accordion-btn" type="button"><span class="fal fa-chevron-down table-child-accordion-icon"></span></button>',
+                    "defaultContent": '<button class="btn btn-transparent table-child-accordion-btn" type="button">Open</button>',
                     "orderable": false,
                     "searchable": false
                 });
@@ -416,9 +410,6 @@ namespace TableService {
                         }
 
                         return d;
-                    },
-                    success: function (response: any) {
-                        console.log(response);
                     },
                     error: function (_xhr: any, _error: any, _thrown: any) {
                         SiteAlert.show("danger", "An error occurred when retrieving data", true);
@@ -442,8 +433,6 @@ namespace TableService {
                             }, ms || 0);
                         };
                     }
-
-                    console.log("complete")
 
                     thisClass._$div.trigger("dt-initialised");
                 },

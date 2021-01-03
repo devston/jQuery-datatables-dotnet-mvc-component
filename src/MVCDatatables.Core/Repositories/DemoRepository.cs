@@ -46,9 +46,9 @@ namespace MVCDatatables.Core.Repositories
                     .Select(x => new DemoDm()
                     {
                         Id = x.DummyKey,
-                        Data = x.RandomData
+                        RandomData = x.RandomData
                     }),
-                x => x.Data.ToLower().Contains(searchString));
+                x => x.RandomData.ToLower().Contains(searchString));
         }
     }
 }

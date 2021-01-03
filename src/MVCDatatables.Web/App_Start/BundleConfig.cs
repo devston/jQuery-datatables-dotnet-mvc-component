@@ -20,16 +20,17 @@ namespace MVCDatatables.Web
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/popper.js",
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/datatables").Include(
-                "~/Scripts/Plugins/DataTables/datatables.js",
-                "~/Scripts/Plugins/DataTables/DataTables-1.10.22/js/dataTables.bootstrap4.js",
-                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/dataTables.buttons.js",
-                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/buttons.bootstrap4.js",
-                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/buttons.html5.min.js",
-                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/js/buttons.print.min.js"
+                "~/Scripts/Plugins/DataTables/datatables-bs4.js",
+                "~/Scripts/Plugins/DataTables/Buttons-1.5.1/js/dataTables.buttons.js",
+                "~/Scripts/Plugins/DataTables/Buttons-1.5.1/js/buttons.bootstrap4.js",
+                "~/Scripts/Plugins/DataTables/JSZip-2.5.0/jszip.min.js",
+                "~/Scripts/Plugins/DataTables/pdfmake-0.1.36/pdfmake.min.js",
+                "~/Scripts/Plugins/DataTables/pdfmake-0.1.36/vfs_fonts.js",
+                "~/Scripts/Plugins/DataTables/Buttons-1.5.1/js/buttons.html5.min.js",
+                "~/Scripts/Plugins/DataTables/Buttons-1.5.1/js/buttons.print.min.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/moment").Include(
@@ -44,14 +45,10 @@ namespace MVCDatatables.Web
             bundles.Add(new ScriptBundle("~/bundles/demo-scripts").Include("~/Scripts/Compiled/Page/datatables-demo.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Scripts/Plugins/DataTables/datatables.css",
                 "~/Scripts/Plugins/DataTables/datatables-bs4.css",
-                "~/Scripts/Plugins/DataTables/Buttons-1.6.5/css/buttons.bootstrap4.css",
+                "~/Scripts/Plugins/DataTables/Buttons-1.5.1/css/buttons.bootstrap4.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-            bundles.Add(new StyleBundle("~/Content/datatables").Include("~/Scripts/Plugins/DataTables/datatables.css"));
-            bundles.Add(new StyleBundle("~/Content/datatables-bs4").Include("~/Scripts/Plugins/DataTables/datatables-bs4.css"));
-            bundles.Add(new StyleBundle("~/Content/datatables-bs4-buttons").Include("~/Scripts/Plugins/DataTables/Buttons-1.6.5/css/buttons.bootstrap4.css"));
         }
     }
 }

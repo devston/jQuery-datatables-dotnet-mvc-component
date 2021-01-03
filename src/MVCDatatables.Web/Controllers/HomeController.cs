@@ -55,7 +55,21 @@ namespace MVCDatatables.Web.Controllers
         {
             var vm = new DataTableViewModel("Data");
             vm.AddColumn("Id", "Id").IsHidden();
-            vm.AddColumn("Data", "Data").IsSortable(true).AllowSearch();
+            vm.AddColumn("RandomData", "Data").IsSortable(true).AllowSearch();
+            vm.WithBackendURL($"/Home/{nameof(GetDemoListData)}/");
+            return Json(vm, JsonRequestBehavior.AllowGet);
+        }
+
+        /// <summary>
+        /// Get the demo table.
+        /// </summary>
+        /// <returns>A json containing the demo table.</returns>
+        [HttpGet]
+        public JsonResult ChildDemoListTable()
+        {
+            var vm = new DataTableViewModel("Data");
+            vm.AddColumn("Id", "Id").IsSortable(true).AllowSearch();
+            vm.AddColumn("RandomData", "Data").IsSortable().AllowSearch().IsInsideChildRow();
             vm.WithBackendURL($"/Home/{nameof(GetDemoListData)}/");
             return Json(vm, JsonRequestBehavior.AllowGet);
         }
