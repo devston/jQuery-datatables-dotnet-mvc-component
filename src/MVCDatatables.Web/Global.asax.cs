@@ -1,8 +1,6 @@
+using Autofac.Integration.Mvc;
 using MVCDatatables.DependencyResolution;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -16,6 +14,21 @@ namespace MVCDatatables.Web
         /// </summary>
         protected void Application_Start()
         {
+            // Set up DI.
+            var builder = IoCBootstrapper.SetUpBuilder();
+
+            // Register the MVC controllers.
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);
+
+            // Register any model binders.
+            builder.RegisterModelBinders(typeof(MvcApplication).Assembly);
+            builder.RegisterModelBinderProvider();
+
+            // Set the dependency resolver to be autofac.
+            var container = builder.Build();
+            IoCBootstrapper.SetIoCContainer(container);
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

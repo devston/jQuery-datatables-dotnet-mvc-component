@@ -40,6 +40,9 @@ namespace MVCDatatables.Web
             bundles.Add(new ScriptBundle("~/bundles/site-alert").Include("~/Scripts/Compiled/Component/site-alert.js"));
             bundles.Add(new ScriptBundle("~/bundles/datatable-service").Include("~/Scripts/Compiled/Component/datatable-service.js"));
 
+            // Pages.
+            bundles.Add(new ScriptBundle("~/bundles/demo-scripts").Include("~/Scripts/Compiled/Page/datatables-demo.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Scripts/Plugins/DataTables/datatables.css",
                 "~/Scripts/Plugins/DataTables/datatables-bs4.css",

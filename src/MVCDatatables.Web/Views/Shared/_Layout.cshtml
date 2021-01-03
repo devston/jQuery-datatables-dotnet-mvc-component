@@ -16,8 +16,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Demo", "Demo", "Home", null, new { @class = "nav-link" })
                 </li>
             </ul>
             @Html.Partial("_LoginPartial")
@@ -37,7 +40,6 @@
     @Scripts.Render("~/bundles/moment")
     @Scripts.Render("~/bundles/site-alert")
     @Scripts.Render("~/bundles/site-loader")
-    @Scripts.Render("~/bundles/datatable-service")
     @RenderSection("scripts", required: false)
 </body>
 </html>

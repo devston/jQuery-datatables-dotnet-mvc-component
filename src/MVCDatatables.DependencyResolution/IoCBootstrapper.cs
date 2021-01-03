@@ -36,6 +36,7 @@ namespace MVCDatatables.DependencyResolution
             var builder = new ContainerBuilder();
 
             // Do any registrations.
+            builder.RegisterModule<DataModule>();
             builder.RegisterModule<ServicesModule>();
 
             // Return the builder.

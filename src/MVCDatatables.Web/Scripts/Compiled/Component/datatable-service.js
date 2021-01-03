@@ -348,6 +348,9 @@ var TableService;
                         }
                         return d;
                     },
+                    success: function (response) {
+                        console.log(response);
+                    },
                     error: function (_xhr, _error, _thrown) {
                         SiteAlert.show("danger", "An error occurred when retrieving data", true);
                     }
@@ -369,6 +372,7 @@ var TableService;
                             }, ms || 0);
                         };
                     }
+                    console.log("complete");
                     thisClass._$div.trigger("dt-initialised");
                 },
                 columns: columnsData,

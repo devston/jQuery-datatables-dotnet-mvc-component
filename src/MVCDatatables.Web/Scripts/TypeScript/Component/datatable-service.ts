@@ -321,8 +321,6 @@ namespace TableService {
                             }
 
                             return `<span>${parseFloat(data)}</span>`;
-
-
                         }
 
                         if (colMetadata.type != undefined) {
@@ -367,6 +365,7 @@ namespace TableService {
                             }
                         }
                     }
+
                     return data;
                 }
 
@@ -418,6 +417,9 @@ namespace TableService {
 
                         return d;
                     },
+                    success: function (response: any) {
+                        console.log(response);
+                    },
                     error: function (_xhr: any, _error: any, _thrown: any) {
                         SiteAlert.show("danger", "An error occurred when retrieving data", true);
                     }
@@ -440,6 +442,8 @@ namespace TableService {
                             }, ms || 0);
                         };
                     }
+
+                    console.log("complete")
 
                     thisClass._$div.trigger("dt-initialised");
                 },

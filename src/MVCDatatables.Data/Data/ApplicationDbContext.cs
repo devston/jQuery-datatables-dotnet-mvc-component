@@ -20,5 +20,7 @@ namespace MVCDatatables.Data.Data
         {
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<DummyTable> DummyData { get; set; }
     }
 }

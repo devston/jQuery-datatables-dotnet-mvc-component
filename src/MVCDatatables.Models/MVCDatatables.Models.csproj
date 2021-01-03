@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Datatables\DataTableJsonResult.cs" />
     <Compile Include="Datatables\DataTablesRecordCount.cs" />
+    <Compile Include="Demo\DemoDm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

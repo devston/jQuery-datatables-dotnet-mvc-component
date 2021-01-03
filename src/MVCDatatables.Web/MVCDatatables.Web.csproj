@@ -47,8 +47,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=6.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.6.0.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=6.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.6.1.0\lib\netstandard2.0\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.Mvc, Version=6.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mvc5.6.0.0\lib\net472\Autofac.Integration.Mvc.dll</HintPath>
@@ -56,8 +56,8 @@
     <Reference Include="Autofac.Integration.Mvc.Owin, Version=6.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mvc5.Owin.6.0.0\lib\net472\Autofac.Integration.Mvc.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac.Integration.Owin, Version=6.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.Owin.6.0.0\lib\net472\Autofac.Integration.Owin.dll</HintPath>
+    <Reference Include="Autofac.Integration.Owin, Version=6.0.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Owin.6.0.1\lib\net472\Autofac.Integration.Owin.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -65,8 +65,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -100,10 +100,10 @@
       <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.1.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
     </Reference>
     <Reference Include="Mvc.JQuery.DataTables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mvc.JQuery.DataTables.1.5.56\lib\net451\Mvc.JQuery.DataTables.dll</HintPath>
+      <HintPath>..\packages\Mvc.JQuery.DataTables.1.5.44\lib\net451\Mvc.JQuery.DataTables.dll</HintPath>
     </Reference>
     <Reference Include="Mvc.JQuery.DataTables.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mvc.JQuery.DataTables.Common.1.5.56\lib\net451\Mvc.JQuery.DataTables.Common.dll</HintPath>
+      <HintPath>..\packages\Mvc.JQuery.DataTables.Common.1.5.44\lib\net451\Mvc.JQuery.DataTables.Common.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -113,12 +113,12 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Linq.Dynamic.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Linq.Dynamic.Core.1.0.7.5\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
+    <Reference Include="System.Linq.Dynamic.Core, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.Core.1.2.3\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
@@ -127,8 +127,8 @@
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -213,6 +213,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RegisterDataTablesModelBinder.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
@@ -456,6 +457,7 @@
     <Content Include="tsconfig.json" />
     <Content Include="Scripts\Plugins\DataTables\Buttons-1.6.5\css\common.scss" />
     <Content Include="Scripts\Plugins\DataTables\Buttons-1.6.5\css\mixins.scss" />
+    <Content Include="Views\Home\Demo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -473,11 +475,16 @@
     <TypeScriptCompile Include="Scripts\TypeScript\CustomTypings\bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\TypeScript\CustomTypings\jquery-extensions.d.ts" />
     <TypeScriptCompile Include="Scripts\TypeScript\CustomTypings\moment.d.ts" />
+    <TypeScriptCompile Include="Scripts\TypeScript\Page\datatables-demo.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MVCDatatables.Core\MVCDatatables.Core.csproj">
+      <Project>{1df46306-976b-4c81-afec-9117a6d1208f}</Project>
+      <Name>MVCDatatables.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MVCDatatables.Data\MVCDatatables.Data.csproj">
       <Project>{1e832bdb-a3f3-492a-a7e5-4e7ae53b6222}</Project>
       <Name>MVCDatatables.Data</Name>
@@ -486,9 +493,17 @@
       <Project>{2fe489a9-168a-421d-b5f7-d39c7f35466f}</Project>
       <Name>MVCDatatables.DependencyResolution</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MVCDatatables.Models\MVCDatatables.Models.csproj">
+      <Project>{b6d6a428-4d9c-44f7-801c-d84c12ab8f65}</Project>
+      <Name>MVCDatatables.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MVCDatatables.Presentation.Models\MVCDatatables.Presentation.Models.csproj">
       <Project>{9d98b25a-6ddb-42e7-a24c-cb9998af22bd}</Project>
       <Name>MVCDatatables.Presentation.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVCDatatables.Services\MVCDatatables.Services.csproj">
+      <Project>{62a882fa-2f61-48d0-b01a-4721b53b0f2f}</Project>
+      <Name>MVCDatatables.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
