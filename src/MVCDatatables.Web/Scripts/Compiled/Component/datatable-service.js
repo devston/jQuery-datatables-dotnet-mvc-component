@@ -136,6 +136,7 @@ var TableService;
         DataTable.prototype.Render = function () {
             var dataTableOptions = this.getBasicConfig();
             // Initialise the datatable with our generic config.
+            // @ts-ignore: Typings not picking this up
             this._$div.DataTable(dataTableOptions);
         };
         /**
@@ -350,6 +351,7 @@ var TableService;
                     $(".dataTables_filter input")
                         .off() // Unbind previous default bindings
                         .on("input", (delay(function (e) {
+                        // @ts-ignore: Typings not picking this up
                         $(this).closest("div[id$='_wrapper']").find(".table").DataTable().search($(this).val().toString()).draw();
                         return;
                     }, 1000))); // Set delay in milliseconds
@@ -379,6 +381,7 @@ var TableService;
                         SiteLoader.remove(tableId);
                     }
                 }
+                // @ts-ignore: Typings not picking this up
             }).DataTable(dtBasicSettings);
             // Bind custom refresh event.
             thisClass._$div.find(".table").on("dt-refresh", function () {

@@ -169,6 +169,7 @@ namespace TableService {
             const dataTableOptions = this.getBasicConfig();
 
             // Initialise the datatable with our generic config.
+            // @ts-ignore: Typings not picking this up
             this._$div.DataTable(dataTableOptions);
         }
 
@@ -419,6 +420,7 @@ namespace TableService {
                     $(".dataTables_filter input")
                         .off() // Unbind previous default bindings
                         .on("input", (delay(function (e) { // Bind our desired behavior
+                            // @ts-ignore: Typings not picking this up
                             $(this).closest("div[id$='_wrapper']").find(".table").DataTable().search($(this).val().toString()).draw();
                             return;
                         }, 1000))); // Set delay in milliseconds
@@ -452,6 +454,7 @@ namespace TableService {
                         SiteLoader.remove(tableId);
                     }
                 }
+                // @ts-ignore: Typings not picking this up
             }).DataTable(dtBasicSettings);
 
             // Bind custom refresh event.
