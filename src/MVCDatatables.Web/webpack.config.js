@@ -8,7 +8,7 @@ const dirName = "dist";
 module.exports = (env, argv) => {
     return {
         mode: argv.mode === "production" ? "production" : "development",
-        entry: ["./node_modules/bootstrap/dist/js/bootstrap.bundle.js", "./Content/app.scss"],
+        entry: ["./Scripts/Page/main.ts", "./Content/app.scss"],
         devtool: false,
         output: {
             filename: bundleFileName + ".js",
@@ -43,7 +43,15 @@ module.exports = (env, argv) => {
                             },
                             "sass-loader"
                         ]
-                }
+                },
+                {
+                    test: /\.tsx?$/,
+                    loader: "ts-loader",
+                    options: {
+                        transpileOnly: true,
+                    },
+                    exclude: /node_modules/
+                },
             ]
         },
         plugins: [
@@ -51,6 +59,9 @@ module.exports = (env, argv) => {
             new MiniCssExtractPlugin({
                 filename: bundleFileName + ".css"
             })
-        ]
+        ],
+        resolve: {
+            extensions: [".tsx", ".ts", ".js"]
+        }
     };
 };

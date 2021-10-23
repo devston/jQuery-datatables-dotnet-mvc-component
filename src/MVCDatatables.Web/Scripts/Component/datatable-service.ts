@@ -7,10 +7,16 @@
     
 \*----------------------------------------------------------------------------*/
 
+import * as $ from "jquery";
+import * as moment from "moment";
+import("datatables.net-bs4");
+import { SiteAlert } from "Scripts/Component/site-alert";
+import { SiteLoader } from "Scripts/Component/site-loader";
+
 /**
  *  This module contains all the logic required for the site table component.
  * */
-namespace TableService {
+export namespace TableService {
     export class DataTable {
         private _dom: string;
         private _buttonSettings: any;

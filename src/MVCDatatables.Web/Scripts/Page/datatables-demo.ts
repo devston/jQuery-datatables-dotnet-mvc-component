@@ -7,6 +7,8 @@
     
 \*----------------------------------------------------------------------------*/
 
+import * as $ from "jquery";
+import { TableService } from "Scripts/Component/datatable-service";
 
 /**
  * A module containing all the logic for the datatables demo page.

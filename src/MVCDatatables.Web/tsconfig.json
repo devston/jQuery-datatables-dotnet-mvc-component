@@ -1,23 +1,30 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "module": "none",
     "noImplicitAny": false,
     "noEmitOnError": true,
     "removeComments": false,
-    "rootDir": "Scripts/TypeScript",
+    "skipLibCheck": true,
+    "rootDir": "Scripts",
     "sourceMap": true,
     "target": "es5",
+    "module": "esnext", // Could be es6 but its in case we use Dynamic import()
+    "moduleResolution": "Node",
     "lib": [ "dom", "es5", "scripthost", "es7" ],
-    "outDir": "Scripts/Compiled"
+    "outDir": "Scripts/Compiled",
+    "baseUrl": "./",
+    "paths": {
+      "Scripts": [ "./Scripts" ]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "include": [
-    "node_modules/@types/*/index.d.ts",
-    "Scripts/TypeScript/**/*", 
-    "Scripts/jquery-3.5.1.js"
+    "Scripts/**/*.ts"
   ],
   "exclude": [
-    //"node_modules",
+    "node_modules",
     "wwwroot"
   ]
 }

@@ -10,7 +10,7 @@
 /**
  *  This module contains all the logic required for the site alert component.
  * */
-namespace SiteAlert {
+export namespace SiteAlert {
     /**
      *  The alert container id.
      * */

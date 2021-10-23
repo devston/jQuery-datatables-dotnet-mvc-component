@@ -29,17 +29,6 @@ namespace MVCDatatables.Web
                 "~/Scripts/Plugins/DataTables/Buttons-1.5.1/js/buttons.print.min.js"
                 ));
 
-            bundles.Add(new ScriptBundle("~/bundles/moment").Include(
-                        "~/Scripts/Plugins/moment.js"));
-
-            // Components.
-            bundles.Add(new ScriptBundle("~/bundles/site-loader").Include("~/Scripts/Compiled/Component/site-loader.js"));
-            bundles.Add(new ScriptBundle("~/bundles/site-alert").Include("~/Scripts/Compiled/Component/site-alert.js"));
-            bundles.Add(new ScriptBundle("~/bundles/datatable-service").Include("~/Scripts/Compiled/Component/datatable-service.js"));
-
-            // Pages.
-            bundles.Add(new ScriptBundle("~/bundles/demo-scripts").Include("~/Scripts/Compiled/Page/datatables-demo.js"));
-
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Scripts/Plugins/DataTables/datatables-bs4.css",
                 "~/Scripts/Plugins/DataTables/Buttons-1.5.1/css/buttons.bootstrap4.css"));

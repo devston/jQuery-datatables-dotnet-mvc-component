@@ -10,7 +10,7 @@
 /**
  *  This module contains all the logic for the OBM site loader.
  * */
-namespace SiteLoader {
+export namespace SiteLoader {
 
     /**
      * Show the loader in the given container.
