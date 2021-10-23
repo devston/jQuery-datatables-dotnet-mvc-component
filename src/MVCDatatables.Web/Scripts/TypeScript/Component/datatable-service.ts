@@ -390,7 +390,7 @@ namespace TableService {
                 columnsData.unshift({
                     "className": "table-child-accordion",
                     "data": "ChildRowAccordion",
-                    "defaultContent": '<button class="btn btn-transparent table-child-accordion-btn" type="button">Open</button>',
+                    "defaultContent": '<button class="btn btn-outline-secondary table-child-accordion-btn" type="button">Open</button>',
                     "orderable": false,
                     "searchable": false
                 });
