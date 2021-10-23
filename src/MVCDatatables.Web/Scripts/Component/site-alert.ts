@@ -7,6 +7,8 @@
     
 \*----------------------------------------------------------------------------*/
 
+import $ from "jquery";
+
 /**
  *  This module contains all the logic required for the site alert component.
  * */

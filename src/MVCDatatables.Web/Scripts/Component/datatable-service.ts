@@ -7,11 +7,19 @@
     
 \*----------------------------------------------------------------------------*/
 
-import * as $ from "jquery";
+import $ from "jquery";
 import * as moment from "moment";
-import("datatables.net-bs4");
-import { SiteAlert } from "Scripts/Component/site-alert";
-import { SiteLoader } from "Scripts/Component/site-loader";
+import "datatables.net";
+import "datatables.net-bs4";
+import "jszip";
+import "pdfmake";
+import "datatables.net-buttons";
+import "datatables.net-buttons/js/buttons.colVis.js";
+import "datatables.net-buttons/js/buttons.html5.js";
+import "datatables.net-buttons/js/buttons.print.js";
+import "datatables.net-buttons-bs4"
+import { SiteAlert } from "./site-alert";
+import { SiteLoader } from "./site-loader";
 
 /**
  *  This module contains all the logic required for the site table component.

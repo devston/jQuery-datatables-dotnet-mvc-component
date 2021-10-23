@@ -5,22 +5,20 @@
     "noEmitOnError": true,
     "removeComments": false,
     "skipLibCheck": true,
-    "rootDir": "Scripts",
     "sourceMap": true,
     "target": "es5",
     "module": "esnext", // Could be es6 but its in case we use Dynamic import()
     "moduleResolution": "Node",
     "lib": [ "dom", "es5", "scripthost", "es7" ],
-    "outDir": "Scripts/Compiled",
-    "baseUrl": "./",
-    "paths": {
-      "Scripts": [ "./Scripts" ]
-    },
+    "baseUrl": "Scripts",
+    "rootDir": "Scripts",
+    "outDir": "dist",
     "typeRoots": [
       "node_modules/@types"
     ]
   },
   "include": [
+    "Scripts",
     "Scripts/**/*.ts"
   ],
   "exclude": [

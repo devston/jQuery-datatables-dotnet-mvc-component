@@ -35,6 +35,8 @@
     "datatables.net-buttons-bs4": "1.5.1",
     "@popperjs/core": "2.10.2",
     "jquery": "3.6.0",
-    "moment": "2.29.1"
+    "jszip": "3.7.1",
+    "moment": "2.29.1",
+    "pdfmake": "0.2.2"
   }
 }

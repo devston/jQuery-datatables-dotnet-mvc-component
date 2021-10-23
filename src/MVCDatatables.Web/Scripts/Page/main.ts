@@ -1,2 +1,2 @@
 ﻿import "bootstrap";
-import "Scripts/Pages/datatables-demo";
+import "./datatables-demo";

@@ -61,7 +61,10 @@ module.exports = (env, argv) => {
             })
         ],
         resolve: {
-            extensions: [".tsx", ".ts", ".js"]
+            extensions: [".tsx", ".ts", ".js"],
+            alias: {
+                Scripts: path.resolve(__dirname, "./Scripts")
+            }
         }
     };
 };
