@@ -4,12 +4,13 @@ An ASP.Net MVC component to interact with [jQuery datatables](https://datatables
 # Getting Started:
 ## Prerequisites
 - [Visual Studio 2019](https://visualstudio.microsoft.com/) with ASP.Net/ web component installed.
+- [Nodejs](https://nodejs.org/en/)
 
 ## TODO:
 - Build more examples in the web project
-- Add webpack to the project so any plugins are no longer in src
 - Add documentation for how to use the C# API
 - Add documentation for how to use the JS API
+- Migrate the project to .Net 5
 
 ## Credits
 [jQuery datatables](https://datatables.net/)
