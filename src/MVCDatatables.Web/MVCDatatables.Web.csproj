@@ -311,6 +311,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Partials\Component\_loader.scss" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

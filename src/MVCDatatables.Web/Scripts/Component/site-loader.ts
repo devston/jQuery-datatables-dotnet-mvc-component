@@ -20,9 +20,9 @@ export namespace SiteLoader {
      */
     export function show(selector: string) {
         if ($(`#site-loader-${selector.substr(1)}`).length === 0) {
-            $(selector).append(`<div class="loader-backdrop load-in-container" id="site-loader-${selector.substr(1)}">
-                                    <div class="loader-container">
-                                        <div class="loader"></div>
+            $(selector).append(`<div class="site-loader-backdrop load-in-container" id="site-loader-${selector.substr(1)}">
+                                    <div class="site-loader-container">
+                                        <div class="site-loader"></div>
                                     </div>
                                 </div>`).addClass("overflow-hidden position-relative");
         }
