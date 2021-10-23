@@ -1,7 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace MVCDatatables.Presentation.Models.Account
+namespace MVCDatatables.Web.ViewModels.Account
 {
+    /// <summary>
+    /// The send code view model - this is placed here temporarily to get around namespace issues.
+    /// Move this once the presentation layer is using .net 5.
+    /// </summary>
     public class SendCodeViewModel
     {
         public string SelectedProvider { get; set; }

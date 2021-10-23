@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 
 namespace MVCDatatables.Presentation.Models.Datatables
 {
@@ -39,7 +37,7 @@ namespace MVCDatatables.Presentation.Models.Datatables
         /// <summary>
         /// Gets or sets the backend service url.
         /// </summary>
-        public HtmlString BackendServiceUrl { get; set; }
+        public string BackendServiceUrl { get; set; }
 
         /// <summary>
         /// Gets or sets the service url.
@@ -271,7 +269,7 @@ namespace MVCDatatables.Presentation.Models.Datatables
         /// <returns>The datatable view model.</returns>
         public DataTableViewModel WithBackendURL(string backendUrl)
         {
-            BackendServiceUrl = new MvcHtmlString(backendUrl);
+            BackendServiceUrl = backendUrl;
             ServiceUrl = backendUrl;
             return this;
         }

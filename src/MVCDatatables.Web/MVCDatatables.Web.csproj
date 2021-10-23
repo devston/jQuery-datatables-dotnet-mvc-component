@@ -48,8 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=6.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.6.1.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=6.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.6.3.0\lib\netstandard2.0\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.Mvc, Version=6.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mvc5.6.0.0\lib\net472\Autofac.Integration.Mvc.dll</HintPath>
@@ -228,6 +228,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\Account\SendCodeViewModel.cs" />
+    <Compile Include="ViewModels\Manage\ConfigureTwoFactorViewModel.cs" />
+    <Compile Include="ViewModels\Manage\ManageLoginsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -625,27 +628,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MVCDatatables.Core\MVCDatatables.Core.csproj">
-      <Project>{1df46306-976b-4c81-afec-9117a6d1208f}</Project>
+      <Project>{060aeb9b-0d7c-4733-9216-cf1aad2fb605}</Project>
       <Name>MVCDatatables.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\MVCDatatables.Data\MVCDatatables.Data.csproj">
-      <Project>{1e832bdb-a3f3-492a-a7e5-4e7ae53b6222}</Project>
+      <Project>{90d10559-808d-4137-a094-1d962e91f3ba}</Project>
       <Name>MVCDatatables.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\MVCDatatables.DependencyResolution\MVCDatatables.DependencyResolution.csproj">
-      <Project>{2fe489a9-168a-421d-b5f7-d39c7f35466f}</Project>
+      <Project>{e2e50ad1-5ee6-4026-b851-91739de43dce}</Project>
       <Name>MVCDatatables.DependencyResolution</Name>
     </ProjectReference>
     <ProjectReference Include="..\MVCDatatables.Models\MVCDatatables.Models.csproj">
-      <Project>{b6d6a428-4d9c-44f7-801c-d84c12ab8f65}</Project>
+      <Project>{90e2addf-eb16-4c21-9885-c3d66a386a78}</Project>
       <Name>MVCDatatables.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\MVCDatatables.Presentation.Models\MVCDatatables.Presentation.Models.csproj">
-      <Project>{9d98b25a-6ddb-42e7-a24c-cb9998af22bd}</Project>
+      <Project>{8488781e-e9bb-45b7-819c-ace153c5821e}</Project>
       <Name>MVCDatatables.Presentation.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\MVCDatatables.Services\MVCDatatables.Services.csproj">
-      <Project>{62a882fa-2f61-48d0-b01a-4721b53b0f2f}</Project>
+      <Project>{fac273b8-445a-44e7-b055-c5556c9ba1ef}</Project>
       <Name>MVCDatatables.Services</Name>
     </ProjectReference>
   </ItemGroup>

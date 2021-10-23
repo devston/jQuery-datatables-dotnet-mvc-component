@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MVCDatatables.Presentation.Models.Manage;
+using MVCDatatables.Web.ViewModels.Manage;
 
 namespace MVCDatatables.Web.Controllers
 {
