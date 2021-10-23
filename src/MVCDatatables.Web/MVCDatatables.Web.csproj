@@ -47,6 +47,33 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <!--
+      1. Install npm packages
+      "Inputs" and "Outputs" are used for incremental builds. If all output items are up-to-date, MSBuild skips the target.
+      The first time the task is executed. Then, it only runs when you change the package.json file.
+      Documentation: https://docs.microsoft.com/en-us/visualstudio/msbuild/incremental-builds?WT.mc_id=DT-MVP-5003978
+   -->
+  <Target Name="NpmInstall" Inputs="package.json" Outputs="node_modules/.install-stamp">
+    <!--
+        Use npm install or npm ci depending on RestorePackagesWithLockFile value.
+        Uncomment the following lines if you want to use this feature:
+
+        <PropertyGroup>
+          <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+        </PropertyGroup>
+     -->
+    <Exec Command="npm ci" Condition="$(RestorePackagesWithLockFile) == 'true'" />
+    <Exec Command="npm install" Condition="$(RestorePackagesWithLockFile) != 'true'" />
+    <!-- Write the stamp file, so incremental builds work -->
+    <Touch Files="node_modules/.install-stamp" AlwaysCreate="true" />
+  </Target>
+  <!--
+      2. Run npm run build before building the .NET project.
+      MSBuild runs NpmInstall before this task because of the DependsOnTargets attribute.
+   -->
+  <Target Name="NpmRunBuild" DependsOnTargets="NpmInstall" BeforeTargets="BeforeBuild">
+    <Exec Command="npm run build" />
+  </Target>
   <ItemGroup>
     <Reference Include="Autofac, Version=6.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.6.3.0\lib\netstandard2.0\Autofac.dll</HintPath>
@@ -233,19 +260,8 @@
     <Compile Include="ViewModels\Manage\ManageLoginsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -255,17 +271,14 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="package.json" />
+    <Content Include="webpack.config.js" />
+    <Content Include="Content\app.scss" />
+    <Content Include="Content\Partials\Component\_table.scss" />
+    <Content Include="Content\Partials\Utility\_lightBootstrap.scss" />
+    <Content Include="Content\Partials\Component\_primary.scss" />
+    <Content Include="Content\Partials\Component\_card.scss" />
+    <Content Include="Content\Partials\Component\_nav.scss" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -487,10 +500,6 @@
     <Content Include="Scripts\Plugins\DataTables\Select-1.2.5\js\dataTables.select.js" />
     <Content Include="Scripts\Plugins\DataTables\Select-1.2.5\js\dataTables.select.min.js" />
     <Content Include="Scripts\Plugins\Moment\moment.js" />
-    <Content Include="Scripts\popper-utils.js" />
-    <Content Include="Scripts\popper-utils.min.js" />
-    <Content Include="Scripts\popper.js" />
-    <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -595,11 +604,6 @@
     <Content Include="Scripts\umd\popper.js.flow" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
     <Content Include="Scripts\umd\popper-utils.js.map" />
-    <Content Include="Scripts\README.md" />
-    <Content Include="Scripts\popper.min.js.map" />
-    <Content Include="Scripts\popper.js.map" />
-    <Content Include="Scripts\popper-utils.min.js.map" />
-    <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="tsconfig.json" />
     <Content Include="Views\Home\Demo.cshtml" />
     <Content Include="Scripts\Plugins\DataTables\Buttons-1.5.1\css\common.scss" />

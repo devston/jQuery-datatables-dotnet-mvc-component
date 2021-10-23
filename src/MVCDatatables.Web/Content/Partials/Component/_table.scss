@@ -1,0 +1,64 @@
+﻿/*----------------------------------------------------------------------------*\
+     Tables
+--------------------------------------------------------------------------------
+
+    All styles related to tables can be found here.
+
+\*----------------------------------------------------------------------------*/
+
+.table-child-accordion-btn {
+    /* The accordion button. */
+    font-size: 16px;
+
+    &:disabled {
+        &:focus,
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        box-shadow: none;
+        color: #ef5350;
+    }
+}
+
+.table-child-accordion-icon {
+    /* The accordion icon. */
+    transition: transform .2s ease-in-out;
+}
+
+.table-child-accordion-icon-rotate > .table-child-accordion-icon {
+    transform: rotate(180deg);
+}
+
+.table-child-row > td {
+    padding: 0;
+}
+
+.table-child-row-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-bottom: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 12px;
+}
+
+.table-child-row-column-container {
+    padding: 12px;
+    width: 100%;
+}
+
+.table-child-row-column-header {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+}

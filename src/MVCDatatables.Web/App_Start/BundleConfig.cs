@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace MVCDatatables.Web
 {
@@ -18,9 +17,6 @@ namespace MVCDatatables.Web
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/datatables").Include(
                 "~/Scripts/Plugins/DataTables/datatables-bs4.js",
@@ -46,9 +42,7 @@ namespace MVCDatatables.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Scripts/Plugins/DataTables/datatables-bs4.css",
-                "~/Scripts/Plugins/DataTables/Buttons-1.5.1/css/buttons.bootstrap4.css",
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                "~/Scripts/Plugins/DataTables/Buttons-1.5.1/css/buttons.bootstrap4.css"));
         }
     }
 }

@@ -426,7 +426,7 @@ namespace TableService {
                         }, 1000))); // Set delay in milliseconds
 
                     function delay(callback, ms) {
-                        var timer = 0;
+                        var timer: any = 0;
                         return function () {
                             var context = this, args = arguments;
                             clearTimeout(timer);
