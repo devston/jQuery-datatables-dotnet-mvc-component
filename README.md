@@ -6,6 +6,10 @@ An ASP.Net MVC component to interact with [jQuery datatables](https://datatables
 - [Visual Studio 2019](https://visualstudio.microsoft.com/) with ASP.Net/ web component installed.
 - [Nodejs](https://nodejs.org/en/)
 
+## Running the solution
+- Run `update-database` in the **nuget package manager** console against the `MVCDatatables.Data` project to create the initial datastore.
+- Start `MVCDatatables.Web`
+
 ## TODO:
 - Build more examples in the web project
 - Add documentation for how to use the C# API
